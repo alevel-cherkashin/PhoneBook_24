@@ -1,0 +1,40 @@
+﻿@model List<PhoneBook_24.BusinessLogic.Models.Contact>
+
+@{
+    ViewBag.Title = "Contact book";
+}
+
+<h2>Contacts</h2>
+
+<hr />
+
+@if (Model != null)
+{
+    <table class="table table-bordered">
+        <tr>
+            <td></td>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phones</td>
+
+        </tr>
+
+
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink("Update", "Update", "Contacts", new { id = contact.Name })</td>
+                <td>@contact.Id</td>
+                <td>@contact.Name</td>
+                <td>@contact.Email</td>
+                <td><a href="Phones">Phones</a> </td>
+            </tr>
+        }
+
+    </table>
+}
+
+<hr />
+
+@Html.ActionLink("Add", "Add", "Contacts")
