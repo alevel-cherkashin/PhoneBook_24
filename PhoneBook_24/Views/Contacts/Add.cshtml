@@ -6,20 +6,9 @@
 <h2>Add</h2>
 @using (Html.BeginForm("Add", "Contacts"))
 {
-    <table>
-        <tr>
-            <td>Email:</td>
-            <td>@Html.TextBoxFor(m => m.Email)</td>
-        </tr>
-        <tr>
-            <td>Name:</td>
-            <td>@Html.TextBoxFor(m => m.Name)</td>
-        </tr>
-    </table>
+    Html.RenderPartial("Partials/ContactDetails", Model);
 
-    <input type="submit" name="Add">
+    <input type="submit" name="Add" value="Add">
 }
-
-<tr />
 
 

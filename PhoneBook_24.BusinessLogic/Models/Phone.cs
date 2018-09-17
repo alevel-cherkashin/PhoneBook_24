@@ -8,6 +8,8 @@ namespace PhoneBook_24.BusinessLogic.Models
 {
     public class Phone
     {
+        public int Id { get; set; }
+
         public int Type { get; set; } // 1 = home; 2 = mobile; 3 = work
 
         public string Number { get; set; }

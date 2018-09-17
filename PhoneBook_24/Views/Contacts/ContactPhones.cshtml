@@ -1,0 +1,27 @@
+﻿@model PhoneBook_24.BusinessLogic.Models.Contact
+
+@{
+    ViewBag.Title = "ConcatcPhones";
+}
+
+<h2>ConcatcPhones</h2>
+
+<table>
+
+
+    <tr>
+        <td>  Name: </td>
+        <td>@Html.DisplayFor(x => x.Name) </td>
+    <tr>
+    <tr>
+        <td>  Email: </td>
+        <td>@Html.DisplayFor(x => x.Email) </td>
+    <tr>
+</table>
+
+@{ if (Model != null)
+    {
+        Html.RenderPartial("Partials/Phones", Model.Phones);
+    }
+}
+

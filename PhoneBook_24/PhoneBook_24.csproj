@@ -150,6 +150,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PhonesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,7 +195,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Contacts\Add.cshtml" />
-    <Content Include="Views\Contacts\PhoneNumber.cshtml" />
+    <Content Include="Views\Contacts\ContactPhones.cshtml" />
+    <Content Include="Views\Contacts\Update.cshtml" />
+    <Content Include="Views\Contacts\Partials\ContactDetails.cshtml" />
+    <Content Include="Views\Contacts\Partials\Phones.cshtml" />
+    <Content Include="Views\Phones\Create.cshtml" />
+    <Content Include="Views\Phones\Update.cshtml" />
+    <Content Include="Views\Phones\Partials\PhoneDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -22,7 +22,7 @@ namespace PhoneBook_24.BusinessLogic.Services
 
     public static class ContactService
     {
-        private static List<Contact> _contacts = new List<Contact>
+     private static List<Contact> _contacts = new List<Contact>
         {
            new Contact
            {
@@ -33,6 +33,7 @@ namespace PhoneBook_24.BusinessLogic.Services
                {
                    new Phone
                    {
+                       Id = 0,
                        Type = 1,
                        Number = "0501234567"
                    }
@@ -41,10 +42,38 @@ namespace PhoneBook_24.BusinessLogic.Services
            }
         };
 
+        private static List<Phone> GetMokckedPhone()
+        {
+            return new List<Phone>
+            {
+                new Phone
+                {
+                    Id=1,
+                    Number="0757483864",
+                    Type = 2
+                },
+
+                new Phone
+                {
+                    Id = 2,
+                    Number="0674539217",
+                    Type = 3
+                    
+                },
+
+                new Phone
+                {
+                    Id = 3,
+                    Number="0506371938",
+                    Type = 1
+                }
+            };
+        }
 
         public static int Create(Contact contact)
         {
             contact.Id = GetMax();
+            contact.Phones = GetMokckedPhone();
 
             _contacts.Add(contact);
 
@@ -83,7 +112,7 @@ namespace PhoneBook_24.BusinessLogic.Services
 
         private static int GetMax()
         {
-            return _contacts.Max(x => x.Id) + 1;
+            return _contacts.Any() ? _contacts.Max(x => x.Id) + 1:1;
         }
     }
 }
