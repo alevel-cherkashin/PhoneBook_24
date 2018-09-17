@@ -1,1 +1,14 @@
-﻿
+﻿@model PhoneBook_24.BusinessLogic.Models.Phone
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Updata</h2>
+
+@using (Html.BeginForm("Update", "Phones"))
+{
+    Html.RenderPartial("Partials/PhoneDetails", Model);
+
+    <input type="submit" name="Update" value="Update">
+}

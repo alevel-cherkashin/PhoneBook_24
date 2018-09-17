@@ -107,7 +107,6 @@ namespace PhoneBook_24.BusinessLogic.Services
 
             oldContact.Name = contact.Name;
             oldContact.Email = contact.Email;
-            oldContact.Phones = contact.Phones;
         }
 
         private static int GetMax()

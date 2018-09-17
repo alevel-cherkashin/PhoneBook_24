@@ -3,22 +3,23 @@
 
 @if (Model != null)
 {
-<table class="table table-bordered">
-    <tr>
-        <td>Number</td>
-        <td>Type</td>
-    </tr>
-    
+    <table class="table table-bordered">
+        <tr>
+            <td></td>
+            <td>Number</td>
+            <td>Type</td>
+        </tr>
+
         @foreach (var phone in Model)
         {
-        <tr>
-            <td>@Html.ActionLink("Update", "Update", "Phones")</td>
-            <td>@phone.Number</td>
-            <td>@phone.Type</td>
-        </tr>
+            <tr>
+                <td>@Html.ActionLink("Update", "Update", "Phones")</td>
+                <td>@phone.Number</td>
+                <td>@phone.Type</td>
+            </tr>
         }
 
     </table>
-    
+
 }
 

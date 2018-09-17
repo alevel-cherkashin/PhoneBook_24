@@ -15,7 +15,7 @@ namespace PhoneBook_24.Controllers
             return View();
         }
 
-        public ActionResult Update(int id)
+        public ActionResult Update()
         {
             return View();
         }
