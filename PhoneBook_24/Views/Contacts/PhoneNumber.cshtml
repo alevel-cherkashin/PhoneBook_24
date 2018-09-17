@@ -1,0 +1,17 @@
+﻿@model PhoneBook_24.BusinessLogic.Models.Phone
+
+@{
+    ViewBag.Title = "PhoneNumber";
+}
+
+<h2>PhoneNumber</h2>
+
+@using (Html.BeginForm("PhoneNumber", "Contacts"))
+{
+ <table>
+     <tr>
+         <td>@Model.Number</td>
+         </tr>
+     </table>
+}
+

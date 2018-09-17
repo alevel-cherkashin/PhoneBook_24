@@ -23,11 +23,18 @@ namespace Phonebook24.Controllers
             return View();
         }
 
+
         [HttpPost]
         public ActionResult Add(Contact model)
         {
             ContactService.Create(model);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult PhoneNumber(int id)
+        {
+            var phone = ContactService.Get(id);
+            return View(phone);
         }
 
         public ActionResult Update(int id)
