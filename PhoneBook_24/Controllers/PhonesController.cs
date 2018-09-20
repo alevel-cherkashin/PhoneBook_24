@@ -1,4 +1,5 @@
 ﻿using PhoneBook_24.BusinessLogic.Models;
+using PhoneBook_24.BusinessLogic.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,12 @@ namespace PhoneBook_24.Controllers
 
         public ActionResult Update()
         {
-            return View();
+            return View("Phones");
         }
         [HttpPost]
         public ActionResult Update(Phone phone)
         {
+            ContactService.UpdatePhone(phone);
             return RedirectToAction("Index", "Contacts");
         }
     }

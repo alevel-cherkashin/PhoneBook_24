@@ -4,8 +4,16 @@
     ViewBag.Title = "Contact book";
 }
 
+<script type="text/javascript">   
+    function HelloWorld() {
+        alert('Hello');
+        document.getElementById("tdHw").value = "test";
+      
+    }
+    </script>
 <h2>Contacts</h2>
-
+<input type="button" value="HW" onclick="HelloWorld() /">
+<input type="text" id="tdHw">
 <hr />
 
 @if (Model != null)

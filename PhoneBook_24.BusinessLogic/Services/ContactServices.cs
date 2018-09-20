@@ -80,7 +80,6 @@ namespace PhoneBook_24.BusinessLogic.Services
             return contact.Id;
         }
 
-
         public static void Delete(int id)
         {
             var contact = Get(id);
@@ -107,6 +106,17 @@ namespace PhoneBook_24.BusinessLogic.Services
 
             oldContact.Name = contact.Name;
             oldContact.Email = contact.Email;
+        }
+
+        public static void UpdatePhone(Phone phone)
+        {
+            phone.Number += "A";
+        }
+
+        public static List<Phone> GetPhoneId(int id)
+        {
+           
+            return new List<Phone>();
         }
 
         private static int GetMax()

@@ -170,6 +170,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -199,9 +200,10 @@
     <Content Include="Views\Contacts\Update.cshtml" />
     <Content Include="Views\Contacts\Partials\ContactDetails.cshtml" />
     <Content Include="Views\Contacts\Partials\Phones.cshtml" />
-    <Content Include="Views\Phones\Create.cshtml" />
-    <Content Include="Views\Phones\Update.cshtml" />
-    <Content Include="Views\Phones\Partials\PhoneDetails.cshtml" />
+    <Content Include="Views\PhonesView\Create.cshtml" />
+    <Content Include="Views\PhonesView\Update.cshtml" />
+    <Content Include="Views\PhonesView\Partials\PhoneDetails.cshtml" />
+    <Content Include="Views\Phones\Phones1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
