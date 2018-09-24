@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace PhoneBook_24.BusinessLogic.Services
 {
     interface IContactService
@@ -106,11 +107,6 @@ namespace PhoneBook_24.BusinessLogic.Services
 
             oldContact.Name = contact.Name;
             oldContact.Email = contact.Email;
-        }
-
-        public static void UpdatePhone(Phone phone)
-        {
-            phone.Number += "A";
         }
 
         public static List<Phone> GetPhoneId(int id)

@@ -1,0 +1,21 @@
+﻿@model PhoneBook_24.BusinessLogic.Models.Phone
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>UpdataPhone</h2>
+
+<table class="table-bordered">
+
+
+    <tr>
+        <td>  New Phone </td>
+        <td>@Html.TextBoxFor(m => m.Number) </td>
+    <tr>
+</table>
+
+@using (Html.BeginForm("UpdatePhones", "Phones"))
+{
+    <input type="submit" name="UpdatePhones" value="update">
+}

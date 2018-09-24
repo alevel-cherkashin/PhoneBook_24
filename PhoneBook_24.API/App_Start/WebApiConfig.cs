@@ -12,6 +12,10 @@ namespace PhoneBook_24.API
             // Web API configuration and services
 
             // Web API routes
+            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            json.UseDataContractJsonSerializer = true;
+
+
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

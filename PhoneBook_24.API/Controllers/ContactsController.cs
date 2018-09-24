@@ -22,9 +22,15 @@ namespace PhoneBook_24.API.Controllers
         [HttpGet]
         public Contact Get(int id)
         {
-            var contacts =ContactService.Get(id);
+            var contacts = ContactService.Get(id);
 
             return contacts;
+        }
+
+        [HttpPost]
+        public void Create(Contact contact)
+        {
+            ContactService.Create(contact);
         }
     }
 }

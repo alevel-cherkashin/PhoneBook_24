@@ -15,15 +15,16 @@ namespace PhoneBook_24.Controllers
         {
             return View();
         }
-
-        public ActionResult Update()
+        [HttpGet]
+        public ActionResult UpdatePhones(Phone phone)
         {
-            return View("Phones");
+            return View();
         }
+
         [HttpPost]
-        public ActionResult Update(Phone phone)
+        public ActionResult UpdatePhones()
         {
-            ContactService.UpdatePhone(phone);
+          
             return RedirectToAction("Index", "Contacts");
         }
     }

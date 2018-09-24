@@ -4,14 +4,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PhoneBook_24.BusinessLogic.Attributes;
 
 
 namespace PhoneBook_24.BusinessLogic.Models
 {
+    [Serializable]
     public class Contact
     {
         public int Id { get; set; }
 
+        //[NameChecking(ErrorMessage = "Wring Start letter")]
         [Required(ErrorMessage = "Имя не указано!")]
         [MaxLength(length: 15, ErrorMessage = "Слишком длинное имя!")]
         public string Name { get; set; }

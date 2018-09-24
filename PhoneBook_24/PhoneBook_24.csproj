@@ -200,10 +200,7 @@
     <Content Include="Views\Contacts\Update.cshtml" />
     <Content Include="Views\Contacts\Partials\ContactDetails.cshtml" />
     <Content Include="Views\Contacts\Partials\Phones.cshtml" />
-    <Content Include="Views\PhonesView\Create.cshtml" />
-    <Content Include="Views\PhonesView\Update.cshtml" />
-    <Content Include="Views\PhonesView\Partials\PhoneDetails.cshtml" />
-    <Content Include="Views\Phones\Phones1.cshtml" />
+    <Content Include="Views\Phones\UpdatePhones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

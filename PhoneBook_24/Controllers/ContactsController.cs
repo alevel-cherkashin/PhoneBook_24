@@ -48,7 +48,7 @@ namespace Phonebook24.Controllers
         }
 
 
-        public ActionResult Update(int id)
+        public ActionResult Update(int id, string email)
         {
             var contact = ContactService.Get(id);
 
