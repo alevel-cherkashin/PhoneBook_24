@@ -1,0 +1,10 @@
+﻿@model PhoneBook_24.BusinessLogic.Models.Phone
+
+<h1>Add Number</h1>
+
+
+@using (Html.BeginForm("AddPhone", "Phones"))
+{
+    Html.RenderPartial("Partials/PhoneNumber", Model);
+    <input type="submit" name="AddPhones" value="AddNumber">
+}

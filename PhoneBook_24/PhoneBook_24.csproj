@@ -201,6 +201,8 @@
     <Content Include="Views\Contacts\Partials\ContactDetails.cshtml" />
     <Content Include="Views\Contacts\Partials\Phones.cshtml" />
     <Content Include="Views\Phones\UpdatePhones.cshtml" />
+    <Content Include="Views\Phones\Partials\PhoneNumber.cshtml" />
+    <Content Include="Views\Phones\AddPhone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

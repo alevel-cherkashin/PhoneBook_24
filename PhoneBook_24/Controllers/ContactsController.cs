@@ -24,21 +24,19 @@ namespace Phonebook24.Controllers
             return View();
         }
 
-
         [HttpPost]
-        public ActionResult Add(Contact model)
+        public ActionResult Add(Contact contact)
         {
             if (ModelState.IsValid)
             {
-                ContactService.Create(model);
-                return RedirectToAction("Index");
+                ContactService.Create(contact);
+                return RedirectToAction("AddPhone","Phones",contact);
             }
             else
             {
-                return View(model);
+                return View(contact);
             }
         }
-
 
         public ActionResult ContactPhones(int id)
         {
@@ -46,7 +44,6 @@ namespace Phonebook24.Controllers
 
             return View(contact);
         }
-
 
         public ActionResult Update(int id, string email)
         {
@@ -68,6 +65,13 @@ namespace Phonebook24.Controllers
             {
                 return View(contact);
             }
+        }
+
+        public ActionResult Delete(int id)
+        {
+            ContactService.Delete(id);
+
+            return RedirectToAction("Index");
         }
     }
 }

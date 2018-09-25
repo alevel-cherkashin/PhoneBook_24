@@ -13,12 +13,11 @@
         @foreach (var phone in Model)
         {
             <tr>
-                <td>@Html.ActionLink("Update", "UpdatePhones", "Phones")</td>
+                <td>@Html.ActionLink("Update", "UpdatePhones", "Phones", new {Id=phone.Id},null)</td>
                 <td>@phone.Number</td>
                 <td>@phone.Type</td>
             </tr>
         }
-
     </table>
 
 }

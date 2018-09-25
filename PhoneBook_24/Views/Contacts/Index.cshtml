@@ -25,27 +25,22 @@
             <td>Name</td>
             <td>Email</td>
             <td>Phones</td>
-
         </tr>
-
 
         @foreach (var contact in Model)
         {
             <tr>
                 <td>@Html.ActionLink("Update", "Update", "Contacts", new { id = contact.Id, email = contact.Email },null)</td>
+                <td>@Html.ActionLink("Delete", "Delete", "Contacts",new { id=contact.Id},null)</td>
                 <td>@contact.Id</td>
                 <td>@contact.Name</td>
                 <td>@contact.Email</td>
-             
-
                 <td>@Html.ActionLink("Phones", "ContactPhones", "Contacts",new { id = contact.Id},null)</td>
-               
             </tr>
         }
-
     </table>
 }
-
 <hr />
 
 @Html.ActionLink("Add", "Add", "Contacts")
+

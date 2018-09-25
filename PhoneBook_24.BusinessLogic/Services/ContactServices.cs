@@ -74,8 +74,7 @@ namespace PhoneBook_24.BusinessLogic.Services
         public static int Create(Contact contact)
         {
             contact.Id = GetMax();
-            contact.Phones = GetMokckedPhone();
-
+            contact.Phones.Add(new Phone());          
             _contacts.Add(contact);
 
             return contact.Id;
@@ -109,15 +108,60 @@ namespace PhoneBook_24.BusinessLogic.Services
             oldContact.Email = contact.Email;
         }
 
-        public static List<Phone> GetPhoneId(int id)
+        public static Phone GetPhone(int Id)
         {
-           
-            return new List<Phone>();
+            foreach (var contact in _contacts)
+            {
+                foreach (var phone in contact.Phones)
+                {
+                    if (phone.Id == Id)
+                    {
+                        return phone;
+                    }
+                }
+            }
+            return null;
+        }
+
+        public static void UpdatePhone(Phone phone)
+        {
+            var oldPhone = GetPhone(phone.Id);
+            oldPhone.Number = phone.Number;
+        }
+
+        public static Phone CreatePhone()
+        {
+            foreach (var contact in _contacts)
+            {
+                foreach (var phone in contact.Phones)
+                {
+                    if (phone.Number == null)
+                    {
+                        phone.Id = GetMaxPhone();
+                        return phone;
+                    }
+                }
+            }
+            return null;
         }
 
         private static int GetMax()
         {
             return _contacts.Any() ? _contacts.Max(x => x.Id) + 1:1;
+        }
+
+        public static int GetMaxPhone()
+        {
+            int MaxValue=0;
+            foreach (var contact in _contacts)
+            {
+                
+                if (MaxValue <= contact.Phones.Max(x => x.Id))
+                {
+                    MaxValue = contact.Phones.Max(x => x.Id) + 1;
+                }
+            }
+            return MaxValue;
         }
     }
 }
