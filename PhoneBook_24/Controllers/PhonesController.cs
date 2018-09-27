@@ -39,8 +39,8 @@ namespace PhoneBook_24.Controllers
         [HttpPost]
         public ActionResult AddPhone(Phone phone)
         {
-            ContactService.CreatePhone();
-            ContactService.UpdatePhone(phone);
+            //ContactService.CreatePhone();
+            //ContactService.UpdatePhone(phone);
             return RedirectToAction("Index", "Contacts");
         }
     }

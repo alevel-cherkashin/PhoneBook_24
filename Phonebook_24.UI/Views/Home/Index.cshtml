@@ -1,0 +1,26 @@
+﻿@model List<PhoneBook_24.BusinessLogic.Models.Contact>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (Model != null)
+{
+    <table class="table table-bordered">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>@contact.Id</td>
+                <td>@contact.Name</td>
+                <td>@contact.Email</td>
+            </tr>
+        }
+    </table>
+}
+

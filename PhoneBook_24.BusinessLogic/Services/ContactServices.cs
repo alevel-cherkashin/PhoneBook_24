@@ -74,7 +74,7 @@ namespace PhoneBook_24.BusinessLogic.Services
         public static int Create(Contact contact)
         {
             contact.Id = GetMax();
-            contact.Phones.Add(new Phone());          
+            //contact.Phones.Add(CreatePhone());          
             _contacts.Add(contact);
 
             return contact.Id;
@@ -108,13 +108,13 @@ namespace PhoneBook_24.BusinessLogic.Services
             oldContact.Email = contact.Email;
         }
 
-        public static Phone GetPhone(int Id)
+        public static Phone GetPhone(int IdPhone)
         {
             foreach (var contact in _contacts)
             {
                 foreach (var phone in contact.Phones)
                 {
-                    if (phone.Id == Id)
+                    if (phone.Id == IdPhone)
                     {
                         return phone;
                     }
@@ -131,11 +131,12 @@ namespace PhoneBook_24.BusinessLogic.Services
 
         public static Phone CreatePhone()
         {
+            Phone phone = new Phone();
             foreach (var contact in _contacts)
             {
-                foreach (var phone in contact.Phones)
+                foreach (var ph in contact.Phones)
                 {
-                    if (phone.Number == null)
+                    if (ph.Number == null)
                     {
                         phone.Id = GetMaxPhone();
                         return phone;
